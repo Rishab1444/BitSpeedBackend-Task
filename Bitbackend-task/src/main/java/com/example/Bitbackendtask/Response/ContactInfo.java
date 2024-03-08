@@ -2,16 +2,18 @@ package com.example.Bitbackendtask.Response;
 
 import lombok.Data;
 
+import javax.crypto.SecretKey;
 import java.util.List;
+import java.util.Set;
 
 @Data
 public class ContactInfo {
     private Long primaryContatctId;
-    private List<String> emails;
-    private List<String> phoneNumbers;
+    private Set<String> emails;
+    private Set<String> phoneNumbers;
     private List<Long> secondaryContactIds;
 
-    public ContactInfo(Long primaryContatctId, List<String> emails, List<String> phoneNumbers, List<Long> secondaryContactIds) {
+    public ContactInfo(Long primaryContatctId, Set<String> emails, Set<String> phoneNumbers, List<Long> secondaryContactIds) {
         this.primaryContatctId = primaryContatctId;
         this.emails = emails;
         this.phoneNumbers = phoneNumbers;
